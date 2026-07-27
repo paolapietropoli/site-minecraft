@@ -1,0 +1,1167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul,
+ol{
+    list-style:none;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ====================================================== */
+/* VARIÁVEIS */
+/* ====================================================== */
+
+:root{
+
+    --verde:#5E9C3D;
+    --verde-claro:#79C34D;
+    --marrom:#6A4B32;
+    --marrom-claro:#8A6545;
+
+    --preto:#111111;
+    --cinza-escuro:#1B1B1B;
+    --cinza:#2A2A2A;
+    --cinza-claro:#CFCFCF;
+    --branco:#FFFFFF;
+
+    --sombra:0 10px 30px rgba(0,0,0,.35);
+
+    --borda:12px;
+
+    --transicao:.35s;
+
+}
+
+/* ====================================================== */
+/* BODY */
+/* ====================================================== */
+
+body{
+
+    background:#121212;
+
+    color:var(--branco);
+
+    font-family:"Poppins",sans-serif;
+
+    line-height:1.8;
+
+}
+
+main{
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:90px 0;
+
+}
+
+h1,
+h2,
+h3,
+h4{
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+h1{
+
+    font-size:3rem;
+
+}
+
+h2{
+
+    font-size:2.4rem;
+
+    margin-bottom:25px;
+
+}
+
+h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:var(--cinza-claro);
+
+}
+
+button{
+
+    padding:15px 35px;
+
+    background:var(--verde);
+
+    color:white;
+
+    border-radius:8px;
+
+    font-size:1rem;
+
+    transition:var(--transicao);
+
+}
+
+button:hover{
+
+    background:var(--verde-claro);
+
+    transform:translateY(-3px);
+
+}
+
+img{
+
+    border-radius:var(--borda);
+
+}
+
+table{
+
+    width:100%;
+
+}
+
+th,
+td{
+
+    padding:15px;
+
+}
+
+header#topo{
+    background:#1b1b1b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,.35);
+}
+
+.logo h1{
+    color:var(--verde-claro);
+    font-size:2.2rem;
+    margin-bottom:5px;
+}
+
+.logo p{
+    font-size:.9rem;
+    color:#bdbdbd;
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav a{
+    position:relative;
+    font-weight:500;
+    transition:var(--transicao);
+}
+
+nav a:hover{
+    color:var(--verde-claro);
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:var(--verde-claro);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.acoes{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.acoes form{
+    display:flex;
+}
+
+.acoes label{
+    display:none;
+}
+
+.acoes input{
+    width:230px;
+    padding:12px 15px;
+    background:var(--cinza);
+    color:var(--branco);
+    border:2px solid transparent;
+    border-radius:8px;
+    outline:none;
+    transition:var(--transicao);
+}
+
+.acoes input:focus{
+    border-color:var(--verde);
+}
+
+#inicio{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero-conteudo{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+}
+
+.hero-texto h2{
+    font-size:3.8rem;
+    margin:20px 0;
+}
+
+.categoria{
+    display:inline-block;
+    background:var(--verde);
+    color:var(--branco);
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:.8rem;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.hero-texto p{
+    font-size:1.1rem;
+    margin-bottom:35px;
+}
+
+.hero-botoes{
+    display:flex;
+    gap:20px;
+}
+
+.hero-imagem{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-imagem img{
+    max-width:520px;
+    width:100%;
+    transition:.4s;
+}
+
+.hero-imagem img:hover{
+    transform:scale(1.05);
+}
+
+.estatisticas{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:80px;
+}
+
+.estatisticas article{
+    background:var(--cinza-escuro);
+    padding:35px;
+    border-radius:var(--borda);
+    text-align:center;
+    box-shadow:var(--sombra);
+    transition:var(--transicao);
+}
+
+.estatisticas article:hover{
+    transform:translateY(-10px);
+}
+
+.estatisticas h3{
+    color:var(--verde-claro);
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.estatisticas p{
+    color:var(--branco);
+}
+
+#introducao header{
+    max-width:900px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+#introducao header p{
+    font-size:1.05rem;
+}
+
+.cards-introducao{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.cards-introducao article{
+    background:var(--cinza-escuro);
+    padding:35px;
+    border-radius:var(--borda);
+    box-shadow:var(--sombra);
+    border:2px solid transparent;
+    transition:var(--transicao);
+}
+
+.cards-introducao article:hover{
+    border-color:var(--verde);
+    transform:translateY(-10px);
+}
+
+.cards-introducao h3{
+    color:var(--verde-claro);
+    margin-bottom:15px;
+}
+
+#introducao aside{
+    background:linear-gradient(135deg,var(--verde),var(--verde-claro));
+    padding:35px;
+    border-radius:var(--borda);
+    color:var(--branco);
+    box-shadow:var(--sombra);
+}
+
+#introducao aside h3{
+    margin-bottom:15px;
+}
+
+#introducao aside p{
+    color:var(--branco);
+}
+
+#modos header{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 60px;
+}
+
+.grid-modos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.card-modo{
+    background:var(--cinza-escuro);
+    border-radius:var(--borda);
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transition:var(--transicao);
+}
+
+.card-modo:hover{
+    transform:translateY(-12px);
+}
+
+.card-modo figure{
+    overflow:hidden;
+}
+
+.card-modo img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:0;
+    transition:.5s;
+}
+
+.card-modo:hover img{
+    transform:scale(1.08);
+}
+
+.card-modo h3{
+    color:var(--verde-claro);
+    margin:25px 25px 15px;
+}
+
+.card-modo p{
+    margin:0 25px 25px;
+}
+
+.card-modo a{
+    display:inline-block;
+    margin:0 25px 30px;
+    padding:12px 22px;
+    background:var(--verde);
+    color:var(--branco);
+    border-radius:8px;
+    font-weight:600;
+    transition:var(--transicao);
+}
+
+.card-modo a:hover{
+    background:var(--verde-claro);
+}
+
+#survival,
+#creative,
+#hardcore,
+#adventure,
+#spectator{
+    scroll-margin-top:100px;
+}
+
+#survival header,
+#creative header,
+#hardcore header,
+#adventure header,
+#spectator header{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 60px;
+}
+
+#survival header p,
+#creative header p,
+#hardcore header p,
+#adventure header p,
+#spectator header p{
+    font-size:1.05rem;
+}
+
+.survival-container,
+.creative-container,
+.hardcore-container,
+.adventure-container,
+.spectator-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+    margin-bottom:60px;
+}
+
+.survival-container figure,
+.creative-container figure,
+.hardcore-container figure,
+.adventure-container figure,
+.spectator-container figure{
+    overflow:hidden;
+    border-radius:var(--borda);
+}
+
+.survival-container img,
+.creative-container img,
+.hardcore-container img,
+.adventure-container img,
+.spectator-container img{
+    width:100%;
+    transition:.4s;
+}
+
+.survival-container img:hover,
+.creative-container img:hover,
+.hardcore-container img:hover,
+.adventure-container img:hover,
+.spectator-container img:hover{
+    transform:scale(1.05);
+}
+
+.survival-container article,
+.creative-container article,
+.hardcore-container article,
+.adventure-container article,
+.spectator-container article{
+    background:var(--cinza-escuro);
+    padding:35px;
+    border-radius:var(--borda);
+    box-shadow:var(--sombra);
+}
+
+.survival-container ul,
+.creative-container ul,
+.hardcore-container ul,
+.adventure-container ul,
+.spectator-container ul{
+    list-style:disc;
+    margin-left:20px;
+}
+
+.survival-container li,
+.creative-container li,
+.hardcore-container li,
+.adventure-container li,
+.spectator-container li{
+    margin:10px 0;
+}
+
+.informacoes-survival,
+.creative-info,
+.hardcore-info,
+.adventure-info,
+.spectator-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.informacoes-survival article,
+.creative-info article,
+.hardcore-info article,
+.adventure-info article,
+.spectator-info article{
+    background:var(--cinza-escuro);
+    padding:30px;
+    border-radius:var(--borda);
+    box-shadow:var(--sombra);
+    transition:var(--transicao);
+}
+
+.informacoes-survival article:hover,
+.creative-info article:hover,
+.hardcore-info article:hover,
+.adventure-info article:hover,
+.spectator-info article:hover{
+    transform:translateY(-8px);
+}
+
+.informacoes-survival ul,
+.creative-info ul,
+.hardcore-info ul,
+.adventure-info ul,
+.spectator-info ul,
+.informacoes-survival ol,
+.creative-info ol,
+.hardcore-info ol,
+.adventure-info ol,
+.spectator-info ol{
+    margin-left:20px;
+}
+
+.informacoes-survival li,
+.creative-info li,
+.hardcore-info li,
+.adventure-info li,
+.spectator-info li{
+    margin:10px 0;
+}
+
+.survival-detalhes,
+.hardcore-estatisticas,
+.adventure-tabela,
+.comandos-spectator{
+    margin-top:60px;
+}
+
+.survival-detalhes article{
+    margin-bottom:40px;
+}
+
+.curiosidade-survival,
+#creative aside,
+#hardcore aside,
+#adventure aside,
+#spectator aside{
+    margin-top:50px;
+    background:linear-gradient(135deg,var(--verde),var(--verde-claro));
+    padding:35px;
+    border-radius:var(--borda);
+    box-shadow:var(--sombra);
+}
+
+.curiosidade-survival h3,
+#creative aside h3,
+#hardcore aside h3,
+#adventure aside h3,
+#spectator aside h3{
+    color:var(--branco);
+}
+
+.curiosidade-survival p,
+#creative aside p,
+#hardcore aside p,
+#adventure aside p,
+#spectator aside p{
+    color:var(--branco);
+}
+
+.galeria-survival{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:50px;
+}
+
+.galeria-survival h3{
+    grid-column:1/-1;
+}
+
+.galeria-survival figure{
+    background:var(--cinza-escuro);
+    border-radius:var(--borda);
+    overflow:hidden;
+    box-shadow:var(--sombra);
+}
+
+.galeria-survival figcaption{
+    padding:18px;
+    text-align:center;
+}
+
+#timeline header,
+#comparacao header,
+#recomendacoes header,
+#faq header{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 60px;
+}
+
+.timeline{
+    position:relative;
+    max-width:1000px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:24px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:var(--verde);
+}
+
+.evento{
+    position:relative;
+    margin-left:70px;
+    background:var(--cinza-escuro);
+    padding:30px;
+    border-radius:var(--borda);
+    box-shadow:var(--sombra);
+    transition:var(--transicao);
+}
+
+.evento:hover{
+    transform:translateX(10px);
+}
+
+.evento::before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--verde-claro);
+    left:-56px;
+    top:35px;
+    border:5px solid #121212;
+}
+
+.evento h3{
+    color:var(--verde-claro);
+    font-size:1.8rem;
+}
+
+.evento h4{
+    margin:10px 0 15px;
+    font-size:1.3rem;
+}
+
+table{
+    width:100%;
+    margin-top:30px;
+    background:var(--cinza-escuro);
+    border-radius:var(--borda);
+    overflow:hidden;
+    box-shadow:var(--sombra);
+}
+
+thead{
+    background:var(--verde);
+}
+
+thead th{
+    color:var(--branco);
+    text-align:left;
+}
+
+tbody tr{
+    transition:var(--transicao);
+}
+
+tbody tr:nth-child(even){
+    background:#222;
+}
+
+tbody tr:hover{
+    background:#333;
+}
+
+th,
+td{
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.cards-recomendacao{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.cards-recomendacao article{
+    background:var(--cinza-escuro);
+    padding:30px;
+    border-radius:var(--borda);
+    box-shadow:var(--sombra);
+    transition:var(--transicao);
+}
+
+.cards-recomendacao article:hover{
+    transform:translateY(-10px);
+    border:2px solid var(--verde);
+}
+
+.cards-recomendacao h3{
+    color:var(--verde-claro);
+    margin-bottom:15px;
+}
+
+#faq{
+    max-width:950px;
+    margin:0 auto;
+}
+
+details{
+    background:var(--cinza-escuro);
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:var(--sombra);
+    overflow:hidden;
+}
+
+summary{
+    padding:20px 25px;
+    cursor:pointer;
+    font-weight:600;
+    transition:var(--transicao);
+    user-select:none;
+}
+
+summary:hover{
+    background:#2c2c2c;
+}
+
+details p{
+    padding:0 25px 25px;
+}
+
+details[open] summary{
+    color:var(--verde-claro);
+}
+
+footer{
+    margin-top:100px;
+    background:#0d0d0d;
+    padding:70px 5% 30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+    margin-bottom:50px;
+}
+
+.footer-container article h2,
+.footer-container article h3{
+    color:var(--verde-claro);
+    margin-bottom:20px;
+}
+
+.footer-container ul{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-container a{
+    color:var(--cinza-claro);
+    transition:var(--transicao);
+}
+
+.footer-container a:hover{
+    color:var(--verde-claro);
+    padding-left:6px;
+}
+
+footer hr{
+    border:none;
+    height:1px;
+    background:#2c2c2c;
+    margin:40px 0;
+}
+
+.footer-copy{
+    text-align:center;
+}
+
+.footer-copy p{
+    margin-bottom:12px;
+}
+
+.footer-copy a{
+    display:inline-block;
+    margin-top:20px;
+    color:var(--verde-claro);
+    font-weight:600;
+    transition:var(--transicao);
+}
+
+.footer-copy a:hover{
+    transform:translateY(-3px);
+}
+
+html::-webkit-scrollbar{
+    width:12px;
+}
+
+html::-webkit-scrollbar-track{
+    background:#181818;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--verde);
+    border-radius:20px;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background:var(--verde-claro);
+}
+
+::selection{
+    background:var(--verde);
+    color:#fff;
+}
+
+@media(max-width:1100px){
+
+    .hero-conteudo,
+    .survival-container,
+    .creative-container,
+    .hardcore-container,
+    .adventure-container,
+    .spectator-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero-texto{
+        text-align:center;
+    }
+
+    .hero-botoes{
+        justify-content:center;
+    }
+
+    .estatisticas{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cards-introducao{
+        grid-template-columns:1fr;
+    }
+
+    .footer-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    header#topo{
+        flex-direction:column;
+        gap:25px;
+        padding:25px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .acoes{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .acoes form,
+    .acoes input{
+        width:100%;
+    }
+
+    .hero-texto h2{
+        font-size:2.6rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .hero-botoes{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-botoes a,
+    .hero-botoes button{
+        width:100%;
+    }
+
+    .estatisticas{
+        grid-template-columns:1fr;
+    }
+
+    .grid-modos{
+        grid-template-columns:1fr;
+    }
+
+    .informacoes-survival,
+    .creative-info,
+    .hardcore-info,
+    .adventure-info,
+    .spectator-info{
+        grid-template-columns:1fr;
+    }
+
+    .galeria-survival{
+        grid-template-columns:1fr;
+    }
+
+    .cards-recomendacao{
+        grid-template-columns:1fr;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    body{
+        font-size:.95rem;
+    }
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+    .hero-texto h2{
+        font-size:2rem;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+    th,
+    td{
+        white-space:nowrap;
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.hero-texto{
+    animation:fadeUp .8s ease;
+}
+
+.hero-imagem img{
+    animation:floating 4s ease-in-out infinite;
+}
+
+section{
+    animation:fadeUp .8s ease;
+}
+
+button,
+.card-modo,
+.cards-introducao article,
+.informacoes-survival article,
+.creative-info article,
+.hardcore-info article,
+.adventure-info article,
+.spectator-info article,
+.evento{
+    transition:.35s ease;
+}
+
+button:hover{
+    box-shadow:0 12px 30px rgba(94,156,61,.4);
+}
+
+.card-modo:hover,
+.cards-introducao article:hover,
+.informacoes-survival article:hover,
+.creative-info article:hover,
+.hardcore-info article:hover,
+.adventure-info article:hover,
+.spectator-info article:hover{
+    box-shadow:0 18px 35px rgba(0,0,0,.45);
+}
+
+.hero-imagem img,
+.card-modo img,
+.galeria-survival img{
+    filter:brightness(.95);
+}
+
+.hero-imagem img:hover,
+.card-modo:hover img,
+.galeria-survival img:hover{
+    filter:brightness(1.08);
+}
+
+h2{
+    position:relative;
+    display:inline-block;
+}
+
+h2::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:4px;
+    margin-top:10px;
+    border-radius:10px;
+    background:var(--verde);
+}
+
+section header{
+    margin-bottom:50px;
+}
+
+.card-modo,
+.evento,
+.informacoes-survival article,
+.creative-info article,
+.hardcore-info article,
+.adventure-info article,
+.spectator-info article{
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.card-modo:hover,
+.evento:hover{
+    border-color:var(--verde);
+}
+
+footer{
+    border-top:4px solid var(--verde);
+}

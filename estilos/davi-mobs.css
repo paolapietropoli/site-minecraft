@@ -1,0 +1,1776 @@
+/* ================================================== */
+/* CONFIGURAÇÕES GERAIS */
+/* ================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+
+:root {
+
+    --verde-principal: #3c8527;
+    --verde-claro: #6bbf45;
+    --verde-escuro: #1f4d18;
+
+    --terra: #79553a;
+    --madeira: #4d3425;
+
+    --azul: #4f9dd8;
+    --azul-escuro: #276b9f;
+
+    --creme: #f4f0df;
+    --branco: #ffffff;
+
+    --texto: #252525;
+    --texto-claro: #666666;
+
+    --fundo: #f5f2e8;
+    --fundo-alternativo: #e8e4d5;
+
+    --sombra: 0 8px 22px rgba(0, 0, 0, 0.14);
+
+}
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 100px;
+
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    color: var(--texto);
+
+    background-color: var(--fundo);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    color: inherit;
+
+}
+
+
+/* ================================================== */
+/* CABEÇALHO */
+/* ================================================== */
+
+header {
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 10px 5%;
+
+    background-color: #171717;
+
+    border-bottom: 5px solid var(--verde-principal);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+
+nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    list-style: none;
+
+}
+
+
+#logo {
+
+    width: 145px;
+
+    height: auto;
+
+    margin-right: 15px;
+
+}
+
+
+nav a {
+
+    display: block;
+
+    padding: 10px 13px;
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: 0.25s;
+
+}
+
+
+nav a:hover {
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    color: #9ce36c;
+
+}
+
+
+nav a.ativo {
+
+    color: var(--branco);
+
+    background-color: var(--verde-principal);
+
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.25);
+
+}
+
+
+.acoes a {
+
+    text-decoration: none;
+
+}
+
+
+.acoes button {
+
+    padding: 12px 19px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: var(--verde-principal);
+
+    color: var(--branco);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+
+.acoes button:hover {
+
+    background-color: var(--verde-claro);
+
+    color: #16310f;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ================================================== */
+/* CONTEÚDO PRINCIPAL */
+/* ================================================== */
+
+main {
+
+    width: 100%;
+
+}
+
+
+main > section {
+
+    padding: 85px max(7%, calc((100% - 1200px) / 2));
+
+}
+
+
+main > section:not(.hero):not(.menu-interno) {
+
+    position: relative;
+
+}
+
+
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+.hero {
+    min-height: 680px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 35, 18, 0.98),
+            rgba(31, 69, 34, 0.92)
+        );
+
+    overflow: hidden;
+}
+
+
+.hero-conteudo {
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.hero-etiqueta {
+    margin-bottom: 25px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #7ebd58;
+    border-radius: 5px;
+
+    color: #a9d98b;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+
+.hero h1 {
+    max-width: 650px;
+
+    margin-bottom: 28px;
+
+    color: #f4f4f4;
+
+    font-size: clamp(4rem, 6vw, 6.5rem);
+    line-height: 0.95;
+
+    text-transform: uppercase;
+}
+
+
+.hero-conteudo > p:not(
+.hero-etiqueta,
+.autor-pagina
+) {
+    max-width: 620px;
+
+    margin-bottom: 20px;
+
+    color: #dedede;
+
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+
+.autor-pagina {
+    margin-bottom: 35px;
+
+    color: #b5dc91;
+
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+
+.botao-principal {
+    display: inline-block;
+
+    padding: 20px 30px;
+
+    border: 2px solid #83bd60;
+
+    background-color: #347d25;
+
+    color: white;
+
+    font-size: 1.05rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    box-shadow:
+        6px 6px 0 rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
+}
+
+
+.botao-principal:hover {
+    transform: translateY(-4px);
+
+    background-color: #438f31;
+}
+
+
+.hero-imagem {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-imagem img {
+    width: 100%;
+    max-width: 700px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 20px 25px
+            rgba(0, 0, 0, 0.4)
+        );
+}
+
+
+.autor-pagina {
+
+    margin-bottom: 32px;
+
+    color: #a9ed7b;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+}
+
+
+.botao-principal {
+
+    display: inline-block;
+
+    padding: 15px 24px;
+
+    background-color: var(--verde-principal);
+
+    border: 3px solid #74b84d;
+
+    box-shadow:
+
+        5px 5px 0 #183d12;
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+
+}
+
+
+.botao-principal:hover {
+
+    background-color: var(--verde-claro);
+
+    color: #183d12;
+
+    transform: translate(2px, 2px);
+
+    box-shadow:
+
+        3px 3px 0 #183d12;
+
+}
+
+
+.hero-imagem {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.hero-imagem img {
+
+    width: min(100%, 550px);
+
+    filter:
+
+        drop-shadow(
+            0 20px 25px rgba(0, 0, 0, 0.45)
+        );
+
+    animation: flutuar 4s ease-in-out infinite;
+
+}
+
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+
+    50% {
+
+        transform: translateY(-13px);
+
+    }
+
+}
+
+
+/* ================================================== */
+/* MENU INTERNO */
+/* ================================================== */
+
+.menu-interno {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 22px 7%;
+
+    background-color: #272727;
+
+    border-bottom: 4px solid var(--verde-principal);
+
+}
+
+
+.menu-interno a {
+
+    padding: 9px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 5px;
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+}
+
+
+.menu-interno a:hover {
+
+    background-color: var(--verde-principal);
+
+    border-color: var(--verde-principal);
+
+}
+
+
+/* ================================================== */
+/* TÍTULOS DAS SEÇÕES */
+/* ================================================== */
+
+.titulo-secao {
+
+    margin-bottom: 45px;
+
+    text-align: center;
+
+}
+
+
+.titulo-secao > p {
+
+    margin-bottom: 10px;
+
+    color: var(--verde-escuro);
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.titulo-secao h2,
+
+main > section > h2 {
+
+    color: var(--madeira);
+
+    font-family: "Press Start 2P", monospace;
+
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+    line-height: 1.5;
+
+}
+
+
+main > section > h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+main > section > h2 + p {
+
+    max-width: 820px;
+
+    margin-bottom: 45px;
+
+    color: var(--texto-claro);
+
+    font-size: 1.02rem;
+
+}
+
+
+/* ================================================== */
+/* SEÇÃO SOBRE */
+/* ================================================== */
+
+.secao-sobre {
+
+    background-color: var(--creme);
+
+}
+
+
+.sobre-conteudo {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+}
+
+
+.sobre-texto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    color: #4e4e4e;
+
+}
+
+
+.sobre-texto p {
+
+    padding-left: 20px;
+
+    border-left: 5px solid var(--verde-principal);
+
+}
+
+
+.classificacoes {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+}
+
+
+.classificacoes div {
+
+    min-height: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 22px;
+
+    background-color: var(--branco);
+
+    border: 1px solid #ddd7c6;
+
+    border-bottom: 5px solid var(--verde-principal);
+
+    border-radius: 8px;
+
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.25s;
+
+}
+
+
+.classificacoes div:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.classificacoes strong {
+
+    margin-bottom: 7px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.05rem;
+
+}
+
+
+.classificacoes span {
+
+    color: var(--texto-claro);
+
+    font-size: 0.86rem;
+
+}
+
+
+/* ================================================== */
+/* ÍNDICE */
+/* ================================================== */
+
+.fundo-alternativo {
+
+    background-color: var(--fundo-alternativo);
+
+}
+
+
+.indice-lista {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 35px 50px;
+
+    background-color: var(--branco);
+
+    border-top: 7px solid var(--verde-principal);
+
+    border-radius: 8px;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.indice-lista > li {
+
+    margin-bottom: 13px;
+
+    padding-left: 8px;
+
+    color: var(--verde-escuro);
+
+    font-weight: 700;
+
+}
+
+
+.indice-lista a {
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    transition: 0.2s;
+
+}
+
+
+.indice-lista a:hover {
+
+    color: var(--verde-principal);
+
+    text-decoration: underline;
+
+}
+
+
+.indice-lista ol {
+
+    margin-top: 10px;
+
+    padding-left: 28px;
+
+}
+
+
+.indice-lista ol li {
+
+    margin-bottom: 6px;
+
+    color: var(--texto-claro);
+
+    font-size: 0.9rem;
+
+    font-weight: 400;
+
+}
+
+
+/* ================================================== */
+/* SEÇÕES DOS MOBS */
+/* ================================================== */
+
+#passivos {
+
+    background:
+
+        linear-gradient(
+            rgba(245, 242, 232, 0.95),
+            rgba(245, 242, 232, 0.95)
+        );
+
+}
+
+
+#neutros {
+
+    background-color: #eaf0e2;
+
+}
+
+
+#hostis {
+
+    background-color: #e9e4df;
+
+}
+
+
+#chefes {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2c2427,
+            #4a3036
+        );
+
+    color: var(--branco);
+
+}
+
+
+#chefes h2 {
+
+    color: #ffcc76;
+
+}
+
+
+#chefes > p {
+
+    color: #e6dfe1;
+
+}
+
+
+#curiosidades {
+
+    background-color: #e8e4d5;
+
+}
+
+
+#fontes {
+
+    background-color: var(--creme);
+
+}
+
+
+/* ================================================== */
+/* SUBTÍTULOS */
+/* ================================================== */
+
+main section > h3 {
+
+    width: 100%;
+
+    margin-top: 60px;
+
+    margin-bottom: 25px;
+
+    padding: 14px 20px;
+
+    background-color: var(--verde-escuro);
+
+    border-left: 8px solid var(--verde-claro);
+
+    color: var(--branco);
+
+    font-family: "Press Start 2P", monospace;
+
+    font-size: clamp(0.85rem, 2vw, 1.2rem);
+
+    line-height: 1.7;
+
+}
+
+
+#hostis > h3 {
+
+    background-color: #56382d;
+
+    border-left-color: #b77c50;
+
+}
+
+
+#chefes article h3 {
+
+    color: #ffcf77;
+
+}
+
+
+/* ================================================== */
+/* CARDS DOS MOBS */
+/* ================================================== */
+
+#passivos,
+
+#neutros,
+
+#hostis,
+
+#chefes,
+
+#curiosidades {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+}
+
+
+#passivos > h2,
+
+#passivos > p,
+
+#passivos > h3,
+
+#passivos > hr,
+
+#neutros > h2,
+
+#neutros > p,
+
+#neutros > h3,
+
+#neutros > hr,
+
+#hostis > h2,
+
+#hostis > p,
+
+#hostis > h3,
+
+#hostis > hr,
+
+#chefes > h2,
+
+#chefes > p,
+
+#curiosidades > h2 {
+
+    grid-column: 1 / -1;
+
+}
+
+
+article {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 22px;
+
+    background-color: var(--branco);
+
+    border: 1px solid #ddd8ca;
+
+    border-radius: 9px;
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+
+    transition: 0.25s;
+
+}
+
+
+article:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+
+}
+
+
+article h3 {
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    color: var(--verde-escuro);
+
+    font-size: 1.1rem;
+
+    line-height: 1.35;
+
+}
+
+
+article a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 190px;
+
+    margin-bottom: 14px;
+
+    padding: 12px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #e8e8e8,
+            #d2d2d2
+        );
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+}
+
+
+article a img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.3s;
+
+}
+
+
+article a:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+article p {
+
+    color: #5d5d5d;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+}
+
+
+article p strong {
+
+    color: var(--verde-escuro);
+
+}
+
+
+article p:nth-last-child(1) {
+
+    margin-top: 10px;
+
+}
+
+
+/* ================================================== */
+/* CARDS DOS CHEFES */
+/* ================================================== */
+
+#chefes article {
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(255, 255, 255, 0.15);
+
+    box-shadow: none;
+
+}
+
+
+#chefes article p {
+
+    color: #e8e1e3;
+
+}
+
+
+#chefes article a {
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+}
+
+
+#chefes article p strong {
+
+    color: #ffcf77;
+
+}
+
+
+/* ================================================== */
+/* CURIOSIDADES */
+/* ================================================== */
+
+#curiosidades {
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+
+
+#curiosidades article {
+
+    min-height: 180px;
+
+    justify-content: center;
+
+    border-left: 7px solid var(--verde-principal);
+
+}
+
+
+#curiosidades article h3 {
+
+    min-height: auto;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* ================================================== */
+/* LINHAS DIVISÓRIAS */
+/* ================================================== */
+
+main hr {
+
+    width: 100%;
+
+    height: 2px;
+
+    margin: 20px 0;
+
+    border: none;
+
+    background-color: rgba(72, 70, 61, 0.18);
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* ================================================== */
+/* FONTES */
+/* ================================================== */
+
+#fontes {
+
+    text-align: center;
+
+}
+
+
+#fontes h2 {
+
+    margin-bottom: 30px;
+
+}
+
+
+#fontes p {
+
+    max-width: 800px;
+
+    margin: 0 auto 18px;
+
+    color: var(--texto-claro);
+
+}
+
+
+#fontes a {
+
+    color: var(--verde-escuro);
+
+    font-weight: 700;
+
+}
+
+
+/* ================================================== */
+/* RODAPÉ */
+/* ================================================== */
+
+footer {
+
+    padding: 55px 7%;
+
+    background-color: #171717;
+
+    border-top: 6px solid var(--verde-principal);
+
+    color: #d9d9d9;
+
+    text-align: center;
+
+}
+
+
+footer h3 {
+
+    margin-bottom: 18px;
+
+    color: var(--branco);
+
+    font-family: "Press Start 2P", monospace;
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+}
+
+
+footer p {
+
+    margin-bottom: 10px;
+
+    font-size: 0.9rem;
+
+}
+
+
+footer strong {
+
+    color: #9ce36c;
+
+}
+
+
+footer a {
+
+    color: #9ce36c;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+footer a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ================================================== */
+/* TABLET */
+/* ================================================== */
+
+@media screen and (max-width: 1000px) {
+
+    header {
+
+        justify-content: center;
+
+        padding: 15px 4%;
+
+    }
+
+
+    nav ul {
+
+        gap: 3px;
+
+    }
+
+
+    #logo {
+
+        width: 120px;
+
+        margin-right: 5px;
+
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .hero-conteudo {
+
+        margin: 0 auto;
+
+    }
+
+
+    .hero-conteudo > p:not(.hero-etiqueta):not(.autor-pagina) {
+
+        margin-right: auto;
+
+        margin-left: auto;
+
+    }
+
+
+    .hero-imagem {
+
+        order: -1;
+
+    }
+
+
+    .hero-imagem img {
+
+        max-width: 430px;
+
+    }
+
+
+    .sobre-conteudo {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    #passivos,
+
+    #neutros,
+
+    #hostis,
+
+    #chefes {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* ================================================== */
+/* CELULAR */
+/* ================================================== */
+
+@media screen and (max-width: 650px) {
+
+    header {
+
+        position: relative;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+
+    nav ul {
+
+        justify-content: center;
+
+    }
+
+
+    #logo {
+
+        width: 135px;
+
+        margin: 0 10px 8px;
+
+    }
+
+
+    nav a {
+
+        padding: 8px 9px;
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .acoes button {
+
+        padding: 10px 15px;
+
+        font-size: 0.78rem;
+
+    }
+
+
+    main > section {
+
+        padding:
+
+            60px 6%;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        gap: 35px;
+
+        padding-top: 60px;
+
+        padding-bottom: 65px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .hero-conteudo > p:not(.hero-etiqueta):not(.autor-pagina) {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .hero-imagem img {
+
+        max-width: 320px;
+
+    }
+
+
+    .menu-interno {
+
+        gap: 7px;
+
+    }
+
+
+    .menu-interno a {
+
+        padding: 7px 10px;
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .titulo-secao {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .titulo-secao > p {
+
+        font-size: 0.65rem;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .titulo-secao h2,
+
+    main > section > h2 {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .classificacoes {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .indice-lista {
+
+        padding: 25px 30px;
+
+        font-size: 0.88rem;
+
+    }
+
+
+    #passivos,
+
+    #neutros,
+
+    #hostis,
+
+    #chefes,
+
+    #curiosidades {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    article {
+
+        padding: 18px;
+
+    }
+
+
+    article h3 {
+
+        min-height: auto;
+
+    }
+
+
+    article a {
+
+        height: 210px;
+
+    }
+
+
+    main section > h3 {
+
+        margin-top: 35px;
+
+        padding: 12px;
+
+        font-size: 0.78rem;
+
+    }
+
+    /* ================================================== */
+/* IMAGEM DO MOB NA HERO */
+/* ================================================== */
+
+.hero-imagem {
+    width: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.hero-imagem img {
+    width: 100%;
+
+    max-width: 430px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    image-rendering: pixelated;
+
+    filter:
+        drop-shadow(
+            20px 25px 0
+            rgba(0, 0, 0, 0.2)
+        );
+}
+
+
+/* ================================================== */
+/* PAINEL COM A LISTA DE MOBS */
+/* ================================================== */
+
+.painel-mobs {
+    padding: 100px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #102b18;
+}
+
+
+.painel-mobs-texto {
+    max-width: 750px;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+
+
+.painel-mobs-texto p {
+    margin-bottom: 15px;
+
+    color: #a8d886;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.painel-mobs-texto h2 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4.5rem
+    );
+
+    text-transform: uppercase;
+}
+
+
+.painel-mobs-texto span {
+    color: #d4d4d4;
+
+    font-size: 1.15rem;
+
+    line-height: 1.7;
+}
+
+
+.painel-mobs-imagem {
+    width: 100%;
+
+    max-width: 1300px;
+
+    padding: 15px;
+
+    background-color: #07120b;
+
+    border:
+        3px solid
+        #4e9138;
+
+    box-shadow:
+        15px 15px 0
+        rgba(0, 0, 0, 0.3);
+}
+
+
+.painel-mobs-imagem img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+}
+
+
+/* ================================================== */
+/* TELAS MUITO PEQUENAS */
+/* ================================================== */
+
+@media screen and (max-width: 390px) {
+
+    nav a {
+
+        padding: 7px;
+
+        font-size: 0.66rem;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 1.45rem;
+
+    }
+
+
+    .hero-etiqueta {
+
+        font-size: 0.58rem;
+
+    }
+
+
+    .botao-principal {
+
+        padding: 13px 17px;
+
+        font-size: 0.82rem;
+
+    }
+
+    
+
+}

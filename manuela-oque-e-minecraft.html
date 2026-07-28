@@ -1,23 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oque é o Minecraft?</title>
-     <style>
+    <title>O que é o Minecraft?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
         .introducao {
             display: flex;
             align-items: center;
             gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
         }
 
         .introducao img {
             width: 250px;
             height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .introducao-texto {
+            flex: 1;
+            min-width: 280px;
         }
 
         .introducao p {
             font-size: 18px;
+            margin-top: 0;
         }
 
         .secao-criador {
@@ -25,127 +49,112 @@
             border-radius: 8px;
             padding: 20px;
             display: flex;
-            margin-bottom: 24px;
             align-items: center;
             gap: 20px;
             background: #fff;
-
+            flex-wrap: wrap;
+            margin-bottom: 24px;
         }
 
         .foto-lado {
-            float: left;
             width: 160px;
-            margin-right: 16px;
             border-radius: 6px;
         }
 
         .texto-lado {
-            overflow: hidden;
+            flex: 1;
+            min-width: 250px;
         }
 
-        .limpar {
-            clear: both;
+        .caixa {
+            max-width: 700px;
+            margin: auto;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f5f5f5;
         }
 
-        .caixa{
-        width: 700px;
-        margin: auto;
-        border: 2px solid #4CAF50;
-        border-radius: 10px;
-        padding: 15px;
-        background-color: #f5f5f5;
-    }
+        .seta {
+            text-align: center;
+            font-size: 30px;
+            margin: 15px 0;
+        }
 
-    .seta{
-        text-align: center;
-        font-size: 30px;
-    }
-
-    
+        .curiosidades-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Oque é Minecraft?</h1>
+    <h1>O que é Minecraft?</h1>
 
     <div class="introducao">
-
         <img src="imagens/WhatsApp Image 2026-07-24 at 14.54.08.jpeg" alt="Imagem do Minecraft">
-
-
-    <p>Minecraft é um jogo eletrônico de mundo aberto que permite aos jogadores explorar, construir e criar em um universo composto por <strong>blocos</strong>. Seu principal objetivo é coletar recursos, fabricar itens e utilizar esses materiais para construir estruturas, ferramentas e diversos outros elementos.
-    </p>
-
-    <p>
-    O jogo oferece diferentes modos de jogo, cada um proporcionando experiências distintas, como sobrevivência, criatividade e aventura. Além de poder jogar sozinho em mundos individuais (single-player), os jogadores também podem participar de servidores e mundos multiplayer, interagindo e colaborando com amigos ou pessoas de diferentes partes do mundo.
-</p>
+        
+        <div class="introducao-texto">
+            <p>Minecraft é um jogo eletrônico de mundo aberto que permite aos jogadores explorar, construir e criar em um universo composto por <strong>blocos</strong>. Seu principal objetivo é coletar recursos, fabricar itens e utilizar esses materiais para construir estruturas, ferramentas e diversos outros elements.</p>
+            <p>O jogo oferece diferentes modos de jogo, cada um proporcionando experiências distintas, como sobrevivência, criatividade e aventura. Além de poder jogar sozinho em mundos individuais (single-player), os jogadores também podem participar de servidores e mundos multiplayer, interagindo e colaborando com amigos ou pessoas de diferentes partes do mundo.</p>
+        </div>
     </div>
 
     <hr />
 
-    <h2 align="center">Criador do Minecraft👨‍💻</h2>
+    <h2>Criador do Minecraft 👨‍💻</h2>
 
     <div class="secao-criador">
         <img src="imagens/swedish-programmer-and-creator-of-minecraft-markus-persson-news-photo-1744318912.avif" alt="Markus Persson" class="foto-lado">
-    
-
-
-    <div class="texto-lado">
-        <p><strong> Markus Persson </strong>, 
-    mais conhecido como <strong>Notch</strong>, 
-    é um programador sueco 
-    responsável pela criação do Minecraft.</p>
-   <p>Ele iniciou o desenvolvimento 
-    do jogo em 2009 e fundou a Mojang, 
-    empresa que lançou oficialmente
-     o Minecraft em 2011.</p>
-
+        
+        <div class="texto-lado">
+            <p><strong>Markus Persson</strong>, mais conhecido como <strong>Notch</strong>, é um programador sueco responsável pela criação do Minecraft.</p>
+            <p>Ele iniciou o desenvolvimento do jogo em 2009 e fundou a Mojang, empresa que lançou oficialmente o Minecraft em 2011.</p>
+        </div>
     </div>
-    </div>
-   <br clear="all">
 
-   <hr />
-   
+    <hr />
 
-    <h2 align="center">A história do Minecraft</h2>
-    <p align="center">O Minecraft começou a ser desenvolvido em 2009 e, ao longo dos anos,
-    tornou-se um dos jogos mais populares do mundo. Veja alguns dos principais
-    acontecimentos da sua história:
-    </p>
-
-    
+    <h2>A história do Minecraft</h2>
+    <p style="text-align: center;">O Minecraft começou a ser desenvolvido em 2009 e, ao longo dos anos, tornou-se um dos jogos mais populares do mundo. Veja alguns dos principais acontecimentos da sua história:</p>
 
     <div class="caixa">
-    <h3>🌱 2009 - Início do desenvolvimento</h3>
-    <p>Em maio de 2009 nasceu o projeto com o nome <strong>Cave Game</strong>.A ideia inicial era criar um ambiente com estética de blocos onde os jogadores tivessem total liberdade para moldar o cenário, semelhante à experiência de brincar com lego.Rapidamente, o desenvolvedor adicionou elementos de sobrevivência e monstros</p>
-</div>
+        <h3>🌱 2009 - Início do desenvolvimento</h3>
+        <p>Em maio de 2009 nasceu o projeto com o nome <strong>Cave Game</strong>. A ideia inicial era criar um ambiente com estética de blocos onde os jogadores tivessem total liberdade para moldar o cenário, semelhante à experiência de brincar com Lego. Rapidamente, o desenvolvedor adicionou elementos de sobrevivência e monstros.</p>
+    </div>
 
-<p class="seta">⬇️</p>
+    <p class="seta">⬇️</p>
 
-<div class="caixa">
-    <h3>🎮 2011 - Lançamento oficial</h3>
-    <p>Em 18 de novembro de 2011, o Minecraft foi oficialmente lançado em sua versão 1.0.Posteriormente, Persson deixou a Mojang e cedeu o controle do desenvolvimento a Jens "Jeb" Bergensten.</p>
-</div>
+    <div class="caixa">
+        <h3>🎮 2011 - Lançamento oficial</h3>
+        <p>Em 18 de novembro de 2011, o Minecraft foi oficialmente lançado em sua versão 1.0. Posteriormente, Persson deixou a Mojang e cedeu o controle do desenvolvimento a Jens "Jeb" Bergensten.</p>
+    </div>
 
-<p class="seta">⬇️</p>
+    <p class="seta">⬇️</p>
 
-<div class="caixa">
-    <h3>💼 2014 - Compra pela Microsoft</h3>
-    <p>Em 15 de setembro de 2014, a Microsoft anunciou a compra da Mojang, empresa responsável pelo Minecraft, por US$ 2,5 bilhões.A compra marcou o início de uma nova fase para o jogo, com expansão para mais plataformas, atualizações frequentes e um crescimento ainda maior da comunidade.</p>
-</div>
+    <div class="caixa">
+        <h3>💼 2014 - Compra pela Microsoft</h3>
+        <p>Em 15 de setembro de 2014, a Microsoft anunciou a compra da Mojang, empresa responsável pelo Minecraft, por US$ 2,5 bilhões. A compra marcou o início de uma nova fase para o jogo, com expansão para mais plataformas, atualizações frequentes e um crescimento ainda maior da comunidade.</p>
+    </div>
 
-<hr>
-<h2 align="center">Curiosidades</h2>
-<h3>🌟Origem do nome</h3>
-<p>Minecraft é a junção das palavras "mine" ("mina" ou "minerar") e "craft" (fabricar com as mãos).</p>
+    <hr>
+    
+    <h2>Curiosidades</h2>
+    
+    <div class="curiosidades-container">
+        <h3>🌟 Origem do nome</h3>
+        <p>Minecraft é a junção das palavras "mine" ("mina" ou "minerar") e "craft" (fabricar com as mãos).</p>
 
-<h3>🌟O Creeper nasceu por um erro</h3>
-<p>Quando Notch tentava criar um porco no jogo, ele trocou acidentalmente a altura pela largura. O programador gostou do resultado e fez mais alguns ajustes para criar o monstrengo que já conhecemos.</p>
+        <h3>🌟 O Creeper nasceu por um erro</h3>
+        <p>Quando Notch tentava criar um porco no jogo, ele trocou acidentalmente a altura pela largura. O programador gostou do resultado e fez mais alguns ajustes para criar o monstrengo que já conhecemos.</p>
 
-<h3>🌟O Minecraft é o jogo mais vendido do mundo</h3>
-<p>Com 200 MILHÕES de cópias vendidas, Minecraft é o jogo mais vendido de todos os tempos.</p>
+        <h3>🌟 O Minecraft é o jogo mais vendido do mundo</h3>
+        <p>Com mais de 200 milhões de cópias vendidas, Minecraft é o jogo mais vendido de todos os tempos.</p>
 
-<h3>🌟Minecraft é matéria obrigatória em uma escola da Suécia</h3>
-<p>Em 2014, a Escola Viktor Rydberg de Ensino Secundário na Suécia inseriu Minecraft como uma matéria obrigatória para estudantes de 13 anos com o fundamento de que o jogo é importante para os estudos de planejamento de cidades, meio ambiente e até mesmo de organização pessoal.</p>
+        <h3>🌟 Minecraft é matéria obrigatória em uma escola da Suécia</h3>
+        <p>Em 2014, a Escola Viktor Rydberg de Ensino Secundário na Suécia inseriu Minecraft como uma matéria obrigatória para estudantes de 13 anos com o fundamento de que o jogo é importante para os estudos de planejamento de cidades, meio ambiente e até mesmo de organização pessoal.</p>
+    </div>
 </body>
 </html>

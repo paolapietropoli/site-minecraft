@@ -1,0 +1,1239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+
+/* ====================================================== */
+/* CONFIGURAÇÕES GERAIS */
+/* ====================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 90px;
+
+}
+
+
+body {
+
+    background: #121212;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+}
+
+
+/* ====================================================== */
+/* VARIÁVEIS */
+/* ====================================================== */
+
+:root {
+
+    --verde: #5e9c3d;
+
+    --verde-claro: #79c34d;
+
+    --verde-escuro: #3f7028;
+
+    --fundo: #121212;
+
+    --fundo-secundario: #1b1b1b;
+
+    --card: #222222;
+
+    --texto-secundario: #cfcfcf;
+
+    --branco: #ffffff;
+
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    --transicao: 0.3s;
+
+}
+
+
+/* ====================================================== */
+/* HEADER */
+/* ====================================================== */
+
+body > header {
+
+    width: 100%;
+
+    min-height: 85px;
+
+    background: #1b1b1b;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 5%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+
+body > header nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+#logo {
+
+    width: auto;
+
+    height: 60px;
+
+    object-fit: contain;
+
+}
+
+
+body > header nav a {
+
+    position: relative;
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    transition: color var(--transicao);
+
+}
+
+
+body > header nav a:hover {
+
+    color: var(--verde-claro);
+
+}
+
+
+body > header nav a::after {
+
+    content: "";
+
+    width: 0;
+
+    height: 3px;
+
+    background: var(--verde-claro);
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -9px;
+
+    border-radius: 20px;
+
+    transition: width var(--transicao);
+
+}
+
+
+body > header nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+body > header nav a.ativo {
+
+    color: var(--verde-claro);
+
+}
+
+
+body > header nav a.ativo::after {
+
+    width: 100%;
+
+}
+
+
+.acoes button {
+
+    padding: 12px 24px;
+
+    background: var(--verde);
+
+    color: var(--branco);
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    transition: var(--transicao);
+
+}
+
+
+.acoes button:hover {
+
+    background: var(--verde-claro);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(94, 156, 61, 0.35);
+
+}
+
+
+/* ====================================================== */
+/* CONTEÚDO PRINCIPAL */
+/* ====================================================== */
+
+main {
+
+    width: 100%;
+
+    margin: 0 auto;
+
+}
+
+
+main > section:not(.hero) {
+
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    padding: 100px 0;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    line-height: 1.2;
+
+}
+
+
+h2 {
+
+    color: var(--branco);
+
+    font-size: 2.5rem;
+
+    margin-bottom: 25px;
+
+}
+
+
+h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 4px;
+
+    background: var(--verde);
+
+    border-radius: 20px;
+
+    margin-top: 12px;
+
+}
+
+
+p {
+
+    color: var(--texto-secundario);
+
+}
+
+
+/* ====================================================== */
+/* HERO */
+/* ====================================================== */
+
+.hero {
+
+    width: 100%;
+
+    min-height: 730px;
+
+    display: grid;
+
+    grid-template-columns: 43% 57%;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 45px 4% 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(11, 15, 12, 0.98) 0%,
+            rgba(11, 15, 12, 0.93) 28%,
+            rgba(11, 15, 12, 0.62) 52%,
+            rgba(11, 15, 12, 0.15) 78%,
+            rgba(11, 15, 12, 0.05) 100%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.28) 0%,
+            rgba(18, 18, 18, 0.15) 70%,
+            #121212 100%
+        ),
+
+        url("../imagens/equipe.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+.hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+
+    padding-left: 4%;
+
+    padding-bottom: 55px;
+
+}
+
+
+.hero-etiqueta {
+
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    background-color: var(--verde);
+
+    color: white;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.hero h1 {
+
+    max-width: 650px;
+
+    margin-bottom: 28px;
+
+    font-size: clamp(4rem, 6vw, 6.8rem);
+
+    line-height: 0.98;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+}
+
+
+.hero-descricao {
+
+    max-width: 600px;
+
+    margin-bottom: 38px;
+
+    color: #e1e1e1;
+
+    font-size: 1.2rem;
+
+    line-height: 1.75;
+
+}
+
+
+.botao-principal {
+
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    border-radius: 9px;
+
+    background-color: var(--verde);
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+
+.botao-principal:hover {
+
+    background-color: var(--verde-claro);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(94, 156, 61, 0.35);
+
+}
+
+
+/* IMAGEM DOS PERSONAGENS */
+
+.hero-imagem {
+
+    height: 670px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-end;
+
+    position: relative;
+
+    z-index: 2;
+
+    overflow: visible;
+
+}
+
+
+.hero-imagem img {
+
+    width: min(100%, 1050px);
+
+    max-width: none;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+
+    transform: scale(1.13);
+
+    transform-origin: center bottom;
+
+    filter:
+
+        drop-shadow(
+            0 25px 30px
+            rgba(0, 0, 0, 0.55)
+        );
+
+    transition: transform 0.4s;
+
+}
+
+
+.hero-imagem img:hover {
+
+    transform: scale(1.16);
+
+}
+
+
+/* ====================================================== */
+/* SOBRE */
+/* ====================================================== */
+
+.sobre {
+
+    max-width: 950px;
+
+    text-align: center;
+
+}
+
+
+.sobre h2::after {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+.sobre p {
+
+    font-size: 1.05rem;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* ====================================================== */
+/* CONTEÚDOS */
+/* ====================================================== */
+
+.conteudos {
+
+    text-align: center;
+
+}
+
+
+.conteudos > p {
+
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+}
+
+
+.conteudos h2::after {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.card {
+
+    min-height: 230px;
+
+    background: var(--fundo-secundario);
+
+    padding: 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 14px;
+
+    text-align: left;
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicao);
+
+}
+
+
+.card:hover {
+
+    border-color: var(--verde);
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+
+}
+
+
+.card h3 {
+
+    color: var(--verde-claro);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card p {
+
+    font-size: 0.95rem;
+
+}
+
+
+/* ====================================================== */
+/* EQUIPE */
+/* ====================================================== */
+
+.equipe {
+
+    text-align: center;
+
+    padding-bottom: 120px;
+
+}
+
+
+.equipe > p {
+
+    max-width: 850px;
+
+    margin: 0 auto 15px;
+
+}
+
+
+.equipe > p:last-of-type {
+
+    margin-bottom: 50px;
+
+}
+
+
+.equipe h2::after {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+.cards-equipe {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 24px;
+
+    align-items: stretch;
+
+}
+
+
+.membro {
+
+    background: #202020;
+
+    min-height: 350px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 16px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+.membro:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--verde);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.membro img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    height: auto;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 11px;
+
+    margin: 0 0 20px;
+
+    border: 3px solid var(--verde);
+
+}
+
+
+.membro h3 {
+
+    color: var(--branco);
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+    line-height: 1.3;
+
+}
+
+
+.membro p {
+
+    color: var(--verde-claro);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+}
+
+
+
+
+/* ====================================================== */
+/* ILUSTRAÇÃO FINAL */
+/* ====================================================== */
+
+.grupo-ilustracao{
+    width:min(1200px,90%);
+    margin:30px auto 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.grupo-ilustracao img{
+    width:100%;
+    max-width:950px;
+    height:auto;
+    display:block;
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.45));
+}
+
+/* ====================================================== */
+/* FOOTER */
+/* ====================================================== */
+
+footer {
+
+    background: #0d0d0d;
+
+    border-top: 4px solid var(--verde);
+
+    padding: 65px 5% 0;
+
+}
+
+
+.footer-container {
+
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 45px;
+
+    padding-bottom: 50px;
+
+}
+
+
+.footer-container h3 {
+
+    color: var(--verde-claro);
+
+    margin-bottom: 18px;
+
+}
+
+
+.footer-container p {
+
+    font-size: 0.9rem;
+
+}
+
+
+.footer-container ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.footer-container a {
+
+    color: var(--texto-secundario);
+
+    font-size: 0.9rem;
+
+    transition: var(--transicao);
+
+}
+
+
+.footer-container a:hover {
+
+    color: var(--verde-claro);
+
+    padding-left: 5px;
+
+}
+
+
+.footer-final {
+
+    width: 100%;
+
+    padding: 22px;
+
+    text-align: center;
+
+    border-top: 1px solid #303030;
+
+}
+
+
+.footer-final p {
+
+    font-size: 0.85rem;
+
+}
+
+
+/* ====================================================== */
+/* RESPONSIVIDADE */
+/* ====================================================== */
+
+@media (max-width: 1100px) {
+
+
+    body > header {
+
+        padding: 15px 3%;
+
+    }
+
+
+    body > header nav ul {
+
+        gap: 18px;
+
+    }
+
+
+    body > header nav a {
+
+        font-size: 0.85rem;
+
+    }
+
+
+    .hero {
+
+        min-height: 650px;
+
+        grid-template-columns: 48% 52%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(3.5rem, 6vw, 5.5rem);
+
+    }
+
+
+    .hero-imagem {
+
+        height: 590px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .cards-equipe {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+
+    body > header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px;
+
+        position: relative;
+
+    }
+
+
+    body > header nav ul {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+    }
+
+
+    #logo {
+
+        height: 50px;
+
+    }
+
+
+ /* ====================================================== */
+/* HERO */
+/* ====================================================== */
+.hero {
+
+    width: 100%;
+
+    min-height: 1100px;
+
+    display: grid;
+    grid-template-columns: 43% 57%;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 45px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(11, 15, 12, 0.55) 0%,
+            rgba(11, 15, 12, 0.35) 30%,
+            rgba(11, 15, 12, 0.15) 60%,
+            rgba(11, 15, 12, 0.05) 80%,
+            rgba(11, 15, 12, 0) 100%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.10) 0%,
+            rgba(0, 0, 0, 0.05) 70%,
+            rgba(18, 18, 18, 0.60) 100%
+        ),
+
+        url("../imagens/equipe.png");
+
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+}
+
+
+.hero-conteudo {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+
+    padding-left: 5%;
+
+    padding-bottom: 55px;
+
+}
+
+    .hero-imagem {
+
+        position: absolute;
+
+        right: -15%;
+
+        bottom: 0;
+
+        width: 75%;
+
+        height: 500px;
+
+        opacity: 0.55;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 4rem;
+
+    }
+
+
+    .hero-descricao {
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .cards-equipe {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+
+    main > section:not(.hero) {
+
+        width: 90%;
+
+        padding: 70px 0;
+
+    }
+
+
+    h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .hero {
+
+        min-height: 650px;
+
+        padding: 40px 7%;
+
+    }
+
+
+    .hero-conteudo {
+
+        padding-bottom: 20px;
+
+    }
+
+
+    .hero-etiqueta {
+
+        font-size: 0.7rem;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 3.1rem;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .hero-descricao {
+
+        max-width: 95%;
+
+        font-size: 1rem;
+
+    }
+
+
+    .hero-imagem {
+
+        width: 100%;
+
+        right: -25%;
+
+        height: 430px;
+
+        opacity: 0.35;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cards-equipe {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .membro {
+
+        max-width: 320px;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .footer-container ul {
+
+        align-items: center;
+
+    }
+
+
+    .footer-container a:hover {
+
+        padding-left: 0;
+
+    }
+
+}
